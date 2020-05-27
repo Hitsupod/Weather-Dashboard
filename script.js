@@ -12,9 +12,10 @@ var forecastURL = 'https://api.openweathermap.org/data/2.5/forecast?q=' ;
 
 
 // Button Event
+
 $("#searchbtn").on("click", function(event) {
     event.preventDefault();
-
+    
 // Using Ajax to call for current weather  
     $.ajax({
         url: dailyURL,
@@ -39,29 +40,21 @@ $("#searchbtn").on("click", function(event) {
         $('#humidity').html(humdityData);
         $('#windSpeed').html(windSpeedData);
     });
-// Testing Fetch 
-//    fetch ('https://api.openweathermap.org/data/2.5/forecast?q=London,uk&appid=e664809273a9e730273447cbf35d1018&unit=metric')
-//        .then(response => response.json())
-//        .then(data => console.log(data))
 // Using Ajax to call for forecast 
-    /*$.ajax({
+   /* $.ajax({
         url: forecastURL,
         dataType: 'json',
         method: "GET",
         data: {q:city, appid: apikey, units: 'metric'}
     })
     .then(response => response.json())
-    .then(data => console.log(data))
-    .then(function(data) {
-        var dayData = '';
-        $.each(data.weather, function(index, val) {
-            var dayData = data.main.temp;
-        })    
-
-        $('#forecastDay').html(dayData);*/
-        
+    .then(data => console.log(data))    */
 });
-
+// Testing Fetch 
+fetch ('https://api.openweathermap.org/data/2.5/forecast?q=London,uk&appid=e664809273a9e730273447cbf35d1018&unit=metric')
+    .then(response => response.json())
+    .then(response => console.log(response))
+});
 // Display Previous Searches 
 searchbtn.addEventListener('click', function () {
     var searchAnswer = $("#searchInput").val();
@@ -77,6 +70,7 @@ searchbtn.addEventListener('click', function () {
         // Adding the button to the HTML
         $("#buttons-view").append(newCity);
     };
+    
     //document.querySelector('#location').innerHTML=searchAnswer;
     // $('div.searchResults').append(searchAnswer);
 }, false);
@@ -100,9 +94,5 @@ searchbtn.addEventListener('click', function () {
     });
 }*/
  
-
-
-
-
 
 
