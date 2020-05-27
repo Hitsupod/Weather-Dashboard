@@ -1,0 +1,52 @@
+.searchHistory {
+    border-color: black;
+    border: 2px;
+    font-weight: bold;
+    
+
+}
+
+.card {
+    border-color: coral;
+    box-sizing: border-box;
+    
+}
+
+.container {
+  
+}
+
+#searchContainer {
+   
+    
+}
+
+
+#currentContainer {
+
+ 
+}
+
+#location{
+    font-weight: bold;
+    text-align: center;
+    font-size: large;
+}
+
+.img {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.output {
+    text-align: center;
+}
+
+#forecast {
+
+}
+

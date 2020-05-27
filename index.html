@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Dashboard</title>
+  <!-- Bootstrap CSS CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel='stylesheet' href="styles.css">
+</head>
+
+<body>
+
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+
+    <!-- Jumbotron for Title -->
+    <div class="jumbotron" style="background-color: gray ; color: white;">
+      <h1 class="text-center">
+        <strong>
+          <i class="weather"></i>Weather Dashboard</strong>
+      </h1>
+    </div>
+
+  
+    <!-- Row for Searching New York Times -->
+    <div class="row" id="searchContainer">
+      <div class="col-sm-3">
+        <br>
+        <!-- First card is for handling the search parameters -->
+        <div class="card">
+          <div class="card-header">
+            <strong>Search for a City:</strong>
+          </div>
+
+        <!-- Search Input -->
+        <div class="card-body">
+              <label for="search">Search</label>
+              <input type="text" class="input" id="searchInput">
+
+        <!-- Search Buttons -->
+        <button type="submit" class="btn btn-default" id="searchbtn">Search</button>
+
+        <!-- Search History -->
+        <div id="buttons-view"></div>
+        <div class='searchHistory' id='history'></div>
+        <div class='searchResults'></div>
+      
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- This row will show the current Day  -->
+  <div class="row" id="currentContainer">
+    <div class="col-sm-9">
+      <br>
+      <div class="card">
+        <!-- Output Container -->
+        <div class="img" id="icon"></div>
+        <div class="output" id="location"></div>
+        <p>Temperature:
+          <div class="output" id="temperature"></div>
+        </p>
+        
+        <p>Humidity:
+          <div class="output" id="humidity"></div>
+        </p>
+        
+        <p>Wind Speed:
+          <div class="output" id="windSpeed"></div>
+        </p>
+        </div>
+      </div>
+  </div>
+
+  <!-- This row will show 5 day forcast-->
+  <div class="row" id="forecast">
+    <div class="col-sm-9">
+      <br>
+      <div class="card">
+        <div class="card-header">
+          <strong>5 Day Forecast:</strong>
+        </div>
+
+        <!-- This main card will hold each of the resulting articles -->
+          <div class="output" id="forecastDay">Day</div>
+          <div class="output" id="forecastTemperature">Temp</div>
+          <div class="output" id="forecastHumidity">Humidity</div>
+          <div class="output" id="forecastWindSpeed">WindSpeed</div>
+          <div class="output" id="forecastuvIndex">UV Index</div> 
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+     
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
