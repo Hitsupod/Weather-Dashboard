@@ -22,6 +22,7 @@ $("#searchbtn").on("click", function(event) {
         method: "GET",
         data: {q:city, appid: apikey, units: 'metric'},
     })
+
     .then(function(data) {
         var tempData = '';
         var humdityData = '';
@@ -32,7 +33,7 @@ $("#searchbtn").on("click", function(event) {
             humdityData = data.main.humidity;
             windSpeedData = data.wind.speed;
             icon = "<img src =" + data.weather[0].icon + ".png>";  
-        })
+        });
         $('#icon').html(icon);
         $('#temperature').html(tempData);
         $('#humidity').html(humdityData);
@@ -43,7 +44,7 @@ $("#searchbtn").on("click", function(event) {
 //        .then(response => response.json())
 //        .then(data => console.log(data))
 // Using Ajax to call for forecast 
-    $.ajax({
+    /*$.ajax({
         url: forecastURL,
         dataType: 'json',
         method: "GET",
@@ -51,7 +52,7 @@ $("#searchbtn").on("click", function(event) {
     })
     .then(response => response.json())
     .then(data => console.log(data))
-    /*.then(function(data) {
+    .then(function(data) {
         var dayData = '';
         $.each(data.weather, function(index, val) {
             var dayData = data.main.temp;
